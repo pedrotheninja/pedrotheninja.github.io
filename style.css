@@ -1,0 +1,88 @@
+/* Layout */
+.main {
+}
+body {
+    font-family: "Arial";
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.26;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+.me {
+    position: absolute;
+    bottom: 25%;
+    right: calc(25% - 118px);
+}
+.clockbox,
+#clock {
+transform: scale(.6);
+position: absolute;
+}
+
+
+/* Clock styles */
+.circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #000;
+}
+.hour-marks {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    /* transition: transform .5s ease-in-out; */
+}
+img {
+    position: absolute;
+}
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+    .clockbox {
+        transform: scale(.4);
+    }
+    .me {
+        bottom: 25%;
+        right: 20px;
+        text-align: right;
+    }
+}
